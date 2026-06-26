@@ -1,0 +1,250 @@
+/* ==========================================================================
+   CSS COMPLET ET NETTOYÉ - CHLOÉ LE COZLEER
+   ========================================================================== */
+
+/* --- 1. Style Général & Variables (Le fond et la police) --- */
+body {
+    font-family: 'Lora', serif; /* Police douce pour le texte */
+    line-height: 1.8;
+    background-color: #fcf9f5; /* Fond crème doux et chaleureux */
+    color: #3e3835; /* Brun très foncé pour adoucir le noir brut */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- 2. En-tête (Header) --- */
+header {
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+    background: radial-gradient(circle at top, #fdf6ee 0%, transparent 70%); /* Léger halo lumineux */
+}
+
+.site-logo {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 4px 6px rgba(166, 124, 82, 0.15)); /* Ombre douce sous le logo */
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif; /* Police élégante pour le nom */
+    margin: 0;
+    color: #2b2523; /* Brun très sombre */
+    font-size: 2.8em;
+    font-weight: 700;
+}
+
+header p {
+    margin: 10px 0 0 0;
+    font-size: 1.2em;
+    color: #a67c52; /* Ton terre cuite de ta carte de visite */
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* --- 3. Menu de Navigation --- */
+.navigation-menu {
+    margin-top: 35px;
+}
+
+.nav-link {
+    display: inline-block;
+    color: #7a706b; /* Gris-brun doux */
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 8px;
+    font-family: 'Lora', serif;
+    font-weight: normal;
+    border-bottom: 2px solid transparent; /* Prépare le trait du dessous */
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #a67c52; /* Passe en terre cuite au survol */
+}
+
+.nav-link.active {
+    color: #a67c52;
+    font-weight: bold;
+    border-bottom: 2px solid #a67c52; /* Trait terre cuite sous la page active */
+}
+
+/* --- 4. Conteneur principal (Main) --- */
+main {
+    max-width: 850px; /* Largeur de lecture confortable */
+    margin: 0 auto 80px auto; /* Centre la page et laisse de l'espace en bas */
+    padding: 0 20px;
+}
+
+/* --- 5. Sections (Les "Bulles" de contenu) --- */
+section {
+    background: #ffffff !important; /* Force le fond blanc de la bulle */
+    padding: 40px;
+    margin: 0 auto 35px auto !important; /* Centre la bulle et crée l'espace en dessous */
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(166, 124, 82, 0.06), 0 5px 15px rgba(0, 0, 0, 0.02) !important; /* Recrée l'ombre */
+    border: 1px solid #f3eae0;
+    max-width: 750px; /* Une largeur parfaite, ni trop large ni trop serrée */
+    box-sizing: border-box;
+}
+
+
+/* Style spécifique pour la section Tarifs pour la démarquer légèrement */
+#tarifs {
+    background-color: #fdfaf7; /* Fond très légèrement rosé/crème */
+    border: 1px solid #ebdcd0;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #a67c52; /* Terre cuite pour les titres */
+    border-bottom: 1px solid #e8ded4; /* Trait de séparation fin */
+    padding-bottom: 15px;
+    margin-top: 0;
+    font-size: 1.9em;
+}
+
+/* --- 6. Personnalisation des listes (Puces élégantes) --- */
+ul {
+    padding-left: 15px;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+/* Remplace les puces rondes noires par des points terre cuite */
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    position: relative;
+    padding-left: 25px;
+}
+
+section ul li::before {
+    content: "•"; /* Le caractère de la puce */
+    color: #a67c52; /* Couleur terre cuite */
+    font-size: 1.5em;
+    position: absolute;
+    left: 5px;
+    top: -4px; /* Ajuste la hauteur de la puce */
+}
+
+/* --- 7. Page Infos Pratiques : Grid et Horaires --- */
+.pratique-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 40px;
+}
+
+/* Adaptation pour les téléphones */
+@media (max-width: 600px) {
+    .pratique-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+        gap: 20px;
+    }
+}
+
+/* Encadré stylisé pour les horaires */
+.horaires-box {
+    background: #fdfbf9;
+    border-left: 3px solid #a67c52; /* Trait décoratif à gauche */
+    padding: 20px;
+    border-radius: 0 15px 15px 0;
+}
+
+.horaires-list {
+    list-style: none !important; /* Enlève les puces ici */
+    padding-left: 0 !important;
+    margin-top: 15px;
+}
+
+.horaires-list li {
+    display: flex;
+    justify-content: space-between; /* Aligne jour à gauche, heures à droite */
+    padding-left: 0 !important;
+    border-bottom: 1px dashed #eedfd3; /* Petite ligne pointillée */
+    padding-bottom: 5px;
+    font-size: 0.95em;
+}
+
+/* S'assure qu'aucune puce n'apparaît dans les horaires */
+.horaires-list li::before {
+    display: none !important;
+}
+
+/* --- 8. Éléments interactifs et Boutons --- */
+strong {
+    color: #2b2523; /* Plus sombre pour faire ressortir le gras */
+}
+
+/* Petit encadré pour l'info de paiement */
+.paiement-info {
+    font-size: 0.95em;
+    background: #f4ece4;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Zone qui contient les deux boutons */
+.action-buttons {
+    text-align: center;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Empile les boutons sur mobile */
+}
+
+/* LE BOUTON PRINCIPAL : Liste d'attente (Plein Terre Cuite) */
+.btn-attente {
+    display: inline-block;
+    background-color: #a67c52; /* Terre cuite de ta carte */
+    color: white;
+    padding: 16px 36px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+    box-shadow: 0 6px 20px rgba(166, 124, 82, 0.25); /* Ombre portée douce */
+    transition: all 0.3s ease;
+}
+
+.btn-attente:hover {
+    background-color: #8c633c; /* Plus foncé au survol */
+    transform: translateY(-2px); /* Monte légèrement */
+    box-shadow: 0 8px 25px rgba(166, 124, 82, 0.35); /* Ombre plus forte */
+}
+
+/* LE BOUTON SECONDAIRE : Doctolib (Contour seul) */
+.btn-doctolib-secondaire {
+    display: inline-block;
+    background-color: transparent; /* Fond transparent */
+    color: #a67c52; /* Texte terre cuite */
+    border: 2px solid #a67c52; /* Bordure terre cuite */
+    padding: 14px 32px; /* Un peu plus petit pour le contour */
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+    transition: all 0.3s ease;
+}
+
+.btn-doctolib-secondaire:hover {
+    background-color: #fdf6ee; /* Léger fond crème au survol */
+    transform: translateY(-2px);
+}
+
+/* --- 9. Pied de page (Footer) --- */
+footer {
+    background-color: #2b2523; /* Brun très foncé, élégant pour fermer le site */
+    color: #e5deda; /* Texte clair */
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
