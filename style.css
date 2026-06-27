@@ -276,13 +276,17 @@ footer {
         height: auto !important;
     }
 }/* Retire le bleu moche de l'iPhone et applique ta propre couleur */
-.telephone-lien-haut {
-    color: #b08554 !important; /* Ton marron de sous-titre */
-    text-decoration: none !important; /* Enlève le soulignement */
-    font-size: 1.2rem; /* Aligne la taille avec tes autres sous-titres */
-    font-weight: bold;
-}.telephone-lien {
-    color: #333333 !important; /* Ta couleur */
+/* Uniquement pour le numéro sous le titre principal */
+.num-entete {
+    color: #b08554 !important; /* Ton marron */
     text-decoration: none !important; /* Pas de soulignement */
-    white-space: nowrap !important; /* 🔥 LA LIGNE MAGIQUE : Empêche le numéro de se couper en deux ! */
+    font-weight: bold;
+}
+
+/* Uniquement pour le numéro du bas dans le texte de contact */
+.num-contact {
+    color: #333333 !important; /* Noir/Gris normal */
+    text-decoration: none !important;
+    white-space: nowrap !important; /* Empêche le numéro de se couper */
+}
 }
