@@ -298,5 +298,17 @@ footer {
     color: #b08554 !important; /* Ton marron de sous-titre */
     text-decoration: none !important; /* Enlève le soulignement */
     font-weight: bold;
+}/* Recentrage parfait des blocs arrondis sur mobile */
+@media (max-width: 768px) {
+    /* On cible les sections ou conteneurs principaux de ton accueil */
+    section, .container, .card, div[class*="section"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        box-sizing: border-box !important;
+    }
 }
 }
