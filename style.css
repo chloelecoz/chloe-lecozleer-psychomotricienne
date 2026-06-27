@@ -76,7 +76,6 @@ main {
     padding: 0 20px;
 }
 
-/* --- 5. Sections (Les "Bulles" de contenu) --- */
 section {
     background: #ffffff !important; /* Force le fond blanc de la bulle */
     padding: 40px;
@@ -84,15 +83,17 @@ section {
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(166, 124, 82, 0.06), 0 5px 15px rgba(0, 0, 0, 0.02) !important; /* Recrée l'ombre */
     border: 1px solid #f3eae0;
-    max-width: 750px; /* Une largeur parfaite, ni trop large ni trop serrée */
-    width: 90%; /* <--- AJOUT : Force la bulle à prendre 90% de l'écran sur mobile */
+    width: 750px; /* <--- FIXE POUR ORDINATEUR : Redevient strictement comme avant */
+    max-width: 100%; 
     box-sizing: border-box;
 }
 
-/* <--- AJOUT : On réduit le padding uniquement sur les téléphones */
-@media (max-width: 600px) {
+/* --- ZONE MOBILE ET TABLETTE (Uniquement pour les écrans de moins de 768px) --- */
+@media (max-width: 768px) {
     section {
-        padding: 20px !important; 
+        width: 90% !important;        /* Force la bulle à rétrécir sur téléphone */
+        padding: 20px !important;     /* Réduit le padding pour laisser de la place au texte */
+        margin: 0 auto 25px auto !important; /* Force le centrage parfait (auto gauche/droite) */
     }
 }
 
