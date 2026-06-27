@@ -275,4 +275,8 @@ footer {
         max-width: 100% !important;
         height: auto !important;
     }
+}/* Retire le bleu moche de l'iPhone et applique ta propre couleur */
+.telephone-lien {
+    color: #333333 !important; /* Change #333333 par la couleur de ton choix (ex: #000000 pour du noir) */
+    text-decoration: none !important; /* Enlève le soulignement sous le numéro */
 }
