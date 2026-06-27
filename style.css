@@ -294,5 +294,9 @@ footer {
     width: 100% !important; /* Permet au bouton de rester plus petit sur téléphone */
     margin-left: auto; /* Centre le bouton si besoin */
     margin-right: auto;
+}.num-entete {
+    color: #b08554 !important; /* Ton marron de sous-titre */
+    text-decoration: none !important; /* Enlève le soulignement */
+    font-weight: bold;
 }
 }
