@@ -276,7 +276,12 @@ footer {
         height: auto !important;
     }
 }/* Retire le bleu moche de l'iPhone et applique ta propre couleur */
-.telephone-lien {
+.telephone-lien-haut {
+    color: #b08554 !important; /* Ton marron de sous-titre */
+    text-decoration: none !important; /* Enlève le soulignement */
+    font-size: 1.2rem; /* Aligne la taille avec tes autres sous-titres */
+    font-weight: bold;
+}.telephone-lien {
     color: #333333 !important; /* Ta couleur */
     text-decoration: none !important; /* Pas de soulignement */
     white-space: nowrap !important; /* 🔥 LA LIGNE MAGIQUE : Empêche le numéro de se couper en deux ! */
