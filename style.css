@@ -277,6 +277,7 @@ footer {
     }
 }/* Retire le bleu moche de l'iPhone et applique ta propre couleur */
 .telephone-lien {
-    color: #333333 !important; /* Change #333333 par la couleur de ton choix (ex: #000000 pour du noir) */
-    text-decoration: none !important; /* Enlève le soulignement sous le numéro */
+    color: #333333 !important; /* Ta couleur */
+    text-decoration: none !important; /* Pas de soulignement */
+    white-space: nowrap !important; /* 🔥 LA LIGNE MAGIQUE : Empêche le numéro de se couper en deux ! */
 }
