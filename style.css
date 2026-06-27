@@ -288,5 +288,11 @@ footer {
     color: #333333 !important; /* Noir/Gris normal */
     text-decoration: none !important;
     white-space: nowrap !important; /* Empêche le numéro de se couper */
+}/* Bloque la taille des gros boutons sur ordinateur */
+.liste-attente-btn, .doctolib-btn, [class*="bouton"], [class*="btn"] {
+    max-width: 350px !important; /* Empêche le bouton de dépasser cette largeur */
+    width: 100% !important; /* Permet au bouton de rester plus petit sur téléphone */
+    margin-left: auto; /* Centre le bouton si besoin */
+    margin-right: auto;
 }
 }
