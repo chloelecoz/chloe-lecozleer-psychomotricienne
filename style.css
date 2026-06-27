@@ -86,7 +86,7 @@ section {
     border: 1px solid #f3eae0;
     max-width: 750px; /* Une largeur parfaite, ni trop large ni trop serrée */
     box-sizing: border-box;
-}
+}14
 
 
 /* Style spécifique pour la section Tarifs pour la démarquer légèrement */
@@ -247,4 +247,32 @@ footer {
     padding: 30px 20px;
     font-size: 0.9em;
     letter-spacing: 0.5px;
+}/* Ce code s'applique uniquement aux écrans de moins de 768px (les téléphones) */
+@media (max-width: 768px) {
+    
+    /* Force le site à ne pas dépasser en largeur */
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Si tu as une structure en colonnes (ex: flexbox), on les empile verticalement */
+    .container, .flex-container, section {
+        flex-direction: column !important;
+        padding: 15px !important;
+    }
+
+    /* On réduit la taille des gros titres pour qu'ils ne coupent pas */
+    h1 {
+        font-size: 1.8rem !important;
+    }
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    /* On ajuste les images pour qu'elles ne débordent pas */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
 }
