@@ -85,8 +85,16 @@ section {
     box-shadow: 0 15px 35px rgba(166, 124, 82, 0.06), 0 5px 15px rgba(0, 0, 0, 0.02) !important; /* Recrée l'ombre */
     border: 1px solid #f3eae0;
     max-width: 750px; /* Une largeur parfaite, ni trop large ni trop serrée */
+    width: 90%; /* <--- AJOUT : Force la bulle à prendre 90% de l'écran sur mobile */
     box-sizing: border-box;
-}14
+}
+
+/* <--- AJOUT : On réduit le padding uniquement sur les téléphones */
+@media (max-width: 600px) {
+    section {
+        padding: 20px !important; 
+    }
+}
 
 
 /* Style spécifique pour la section Tarifs pour la démarquer légèrement */
